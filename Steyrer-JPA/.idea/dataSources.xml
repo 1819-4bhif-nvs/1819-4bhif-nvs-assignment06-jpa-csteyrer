@@ -8,5 +8,11 @@
       <jdbc-driver>org.apache.derby.jdbc.ClientDriver</jdbc-driver>
       <jdbc-url>jdbc:derby://localhost:1527/db</jdbc-url>
     </data-source>
+    <data-source source="LOCAL" name="h2db@localhost" uuid="90c821df-d18f-4605-ac31-95bb2b26e37f">
+      <driver-ref>h2.unified</driver-ref>
+      <synchronize>true</synchronize>
+      <jdbc-driver>org.h2.Driver</jdbc-driver>
+      <jdbc-url>jdbc:h2:tcp://localhost/~/db</jdbc-url>
+    </data-source>
   </component>
 </project>

@@ -7,7 +7,6 @@ import javax.ejb.Singleton;
 import javax.ejb.Startup;
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
-import javax.persistence.TypedQuery;
 import java.time.LocalDateTime;
 
 @Startup
@@ -30,10 +29,11 @@ public class InitBean {
         BusStop busStop = new BusStop("Haltestelle-Leonding");
         em.persist(busStop);
 
-        Shedule shedule = new Shedule(bus, busStop, LocalDateTime.of(2018, 12, 1, 18, 30));
-        em.persist(shedule);
+        Schedule schedule = new Schedule(bus, busStop, LocalDateTime.of(2018, 12, 1, 18, 30));
+        em.persist(schedule);
 
         TimeTicket ticket = new TimeTicket(2.5, 1);
+        ticket.setBus(bus);
         bus.addTicket(ticket);
         em.persist(ticket);
         em.merge(bus);

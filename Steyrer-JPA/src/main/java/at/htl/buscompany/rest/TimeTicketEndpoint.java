@@ -1,42 +1,63 @@
 package at.htl.buscompany.rest;
 
+import at.htl.buscompany.model.Bus;
 import at.htl.buscompany.model.BusStop;
-import at.htl.buscompany.model.Shedule;
 import at.htl.buscompany.model.TimeTicket;
 
-import javax.ejb.Stateful;
+import javax.ejb.Stateless;
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
 import javax.ws.rs.*;
-import java.sql.Time;
-import java.time.LocalDateTime;
+import javax.ws.rs.core.MediaType;
+import javax.ws.rs.core.Response;
 
 @Path("timeTicket")
-@Stateful
+@Stateless
 public class TimeTicketEndpoint {
     @PersistenceContext
     EntityManager em;
 
     @GET
+    @Produces(MediaType.APPLICATION_JSON)
     @Path("{id}")
     public TimeTicket getTimeTicket(@PathParam("id") long id) {
         return em.find(TimeTicket.class, id);
     }
 
     @POST
-    public void postTimeTicket(TimeTicket timeTicket) {
+    @Path("{busId}")
+    public Response postTimeTicket(@PathParam("busId") long busId,TimeTicket timeTicket) {
+        Bus bus = em.find(Bus.class, busId);
+        if(bus == null) return Response.status(404).build();
+
+        timeTicket.setBus(bus);
+        bus.addTicket(timeTicket);
         em.persist(timeTicket);
+
+        return Response.noContent().build();
     }
 
     @PUT
-    @Path("{id}/{hours}")
-    public void putTimeTicket(@PathParam("id") long id, @PathParam("hours") int hours)
+    @Path("{busId}/{id}")
+    public Response putTimeTicket(@PathParam("busId") long busId, @PathParam("id") long id, TimeTicket newTimeTicket)
     {
+        Bus bus = em.find(Bus.class, busId);
+        if(bus == null) return Response.status(404).build();
+
         TimeTicket timeTicket = em.find(TimeTicket.class, id);
         if(timeTicket != null) {
-            timeTicket.setHours(hours);
-            em.merge(timeTicket);
+            timeTicket.getBus().removeTicket(timeTicket);
+            bus.addTicket(timeTicket);
+            timeTicket.setPrice(newTimeTicket.getPrice());
+            timeTicket.setHours(newTimeTicket.getHours());
         }
+        else {
+            newTimeTicket.setBus(bus);
+            bus.addTicket(newTimeTicket);
+            em.persist(newTimeTicket);
+        }
+
+        return Response.noContent().build();
     }
 
     @DELETE

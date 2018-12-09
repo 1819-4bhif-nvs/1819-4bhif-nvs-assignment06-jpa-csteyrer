@@ -34,6 +34,9 @@ public abstract class Ticket {
     public Bus getBus() {
         return bus;
     }
+    public void setBus(Bus bus) {
+        this.bus = bus;
+    }
 
     public double getPrice() {
         return price;

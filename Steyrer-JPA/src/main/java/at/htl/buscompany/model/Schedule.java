@@ -4,7 +4,7 @@ import javax.persistence.*;
 import java.time.LocalDateTime;
 
 @Entity
-public class Shedule {
+public class Schedule {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -16,10 +16,10 @@ public class Shedule {
     private LocalDateTime stopTime;
 
     //region Constructor
-    public Shedule() {
+    public Schedule() {
     }
 
-    public Shedule(Bus bus, BusStop busStop, LocalDateTime stopTime) {
+    public Schedule(Bus bus, BusStop busStop, LocalDateTime stopTime) {
         this.bus = bus;
         this.busStop = busStop;
         this.stopTime = stopTime;

@@ -39,6 +39,7 @@ public class BusCompanyEndpointsIT {
         assertThat(response.getStatus(), is(200));
         JsonValue jsonValue = response.readEntity(JsonArray.class).get(0);
 
+
         String driverName = jsonValue.asJsonObject().getString("driverName");
         System.out.println(driverName);
 
@@ -48,7 +49,7 @@ public class BusCompanyEndpointsIT {
                 .add("driverName", "Herbert")
                 .add("busType", "Gelenkbus")
                 .build();
-        response = target.request().post(Entity.json(busJson));
+        response = target.path("2").request().put(Entity.json(busJson)); //( post )
         assertThat(response.getStatus(), is(204));
         response = target.request(MediaType.APPLICATION_JSON).get();
         assertThat(response.getStatus(), is(200));
@@ -74,33 +75,107 @@ public class BusCompanyEndpointsIT {
 
         assertThat(driverName, is("Max"));
         //---------------------------------------------------------------------------------
-        //reset
-        response = target.path("2").request().delete();
-        assertThat(response.getStatus(), is(204));
     }
 
     @Test
     public void test_02() {
-        Response response = this.target.path("busStop/1").request(MediaType.APPLICATION_JSON).get();
+        WebTarget target = this.target.path("busStop");
+        Response response = target.path("1").request(MediaType.APPLICATION_JSON).get();
         assertThat(response.getStatus(), is(200));
         JsonValue jsonValue = response.readEntity(JsonValue.class);
 
         String busStopName = jsonValue.asJsonObject().getString("busStopName");
-        System.out.printf(busStopName);
+        System.out.println(busStopName);
 
         assertThat(busStopName, is("Haltestelle-Leonding"));
+
+        //---------------------------------------------------------------------------------
+        JsonObject busStopJson = Json.createObjectBuilder()
+                .add("busStopName", "Haltestelle-Traun")
+                .build();
+        response = target.path("2").request().put(Entity.json(busStopJson)); //( post )
+        assertThat(response.getStatus(), is(204));
+        response = target.path("2").request(MediaType.APPLICATION_JSON).get();
+        assertThat(response.getStatus(), is(200));
+        jsonValue = response.readEntity(JsonValue.class);
+
+        busStopName = jsonValue.asJsonObject().getString("busStopName");
+        System.out.println(busStopName);
+
+        assertThat(busStopName, is("Haltestelle-Traun"));
+        //---------------------------------------------------------------------------------
+        busStopJson = Json.createObjectBuilder()
+                .add("busStopName", "Haltestelle-Oedt")
+                .build();
+        response = target.path("2").request().put(Entity.json(busStopJson));
+        assertThat(response.getStatus(), is(204));
+        response = target.path("2").request(MediaType.APPLICATION_JSON).get();
+        assertThat(response.getStatus(), is(200));
+        jsonValue = response.readEntity(JsonValue.class);
+
+        busStopName = jsonValue.asJsonObject().getString("busStopName");
+        System.out.println(busStopName);
+
+        assertThat(busStopName, is("Haltestelle-Oedt"));
+        //---------------------------------------------------------------------------------
     }
 
     @Test
     public void test_03() {
-        Response response = this.target.path("shedule/1").request(MediaType.APPLICATION_JSON).get();
+        JsonObject busJson = Json.createObjectBuilder()
+                .add("driverName", "Herbert")
+                .add("busType", "Gelenkbus")
+                .build();
+        Response response = target.path("bus/2").request().put(Entity.json(busJson)); //( post )
+        assertThat(response.getStatus(), is(204));
+
+        JsonObject busStopJson = Json.createObjectBuilder()
+                .add("busStopName", "Haltestelle-Traun")
+                .build();
+        response = target.path("busStop/2").request().put(Entity.json(busStopJson)); //( post )
+        assertThat(response.getStatus(), is(204));
+
+
+
+        WebTarget target = this.target.path("schedule");
+        response = target.path("1").request(MediaType.APPLICATION_JSON).get();
         assertThat(response.getStatus(), is(200));
         JsonValue jsonValue = response.readEntity(JsonValue.class);
 
         String stopTime = jsonValue.asJsonObject().getString("stopTime");
-        System.out.printf(stopTime);
+        System.out.println(stopTime);
 
         assertThat(stopTime, is("2018-12-01T18:30:00"));
+
+        //---------------------------------------------------------------------------------
+        JsonObject scheduleJson = Json.createObjectBuilder()
+                .add("stopTime", "2018-12-01T18:30:30")
+                .build();
+        response = target.path("2/2/2").request().put(Entity.json(scheduleJson)); //( post )
+        assertThat(response.getStatus(), is(204));
+        response = target.path("2").request(MediaType.APPLICATION_JSON).get();
+        assertThat(response.getStatus(), is(200));
+        jsonValue = response.readEntity(JsonValue.class);
+
+        stopTime = jsonValue.asJsonObject().getString("stopTime");
+        System.out.println(stopTime);
+
+        assertThat(stopTime, is("2018-12-01T18:30:30"));
+        //---------------------------------------------------------------------------------
+        scheduleJson = Json.createObjectBuilder()
+                .add("stopTime", "2018-12-01T18:35:30")
+                .build();
+        response = target.path("2/2/2").request().put(Entity.json(scheduleJson));
+        assertThat(response.getStatus(), is(204));
+        response = target.path("2").request(MediaType.APPLICATION_JSON).get();
+        assertThat(response.getStatus(), is(200));
+        jsonValue = response.readEntity(JsonValue.class);
+
+        stopTime = jsonValue.asJsonObject().getString("stopTime");
+        System.out.println(stopTime);
+
+        assertThat(stopTime, is("2018-12-01T18:35:30"));
+        //---------------------------------------------------------------------------------
     }
 
 }
