@@ -10,3 +10,14 @@
 - Ein Datum muss in Ihrem REST-Endpoint
 - Verwenden Sie eine DerbyDb sowie eine H2
 - Erstellen Systemtests auf Basis JavaSE.
+
+
+## CLD (Class Diagram)
+
+<img src="Steyrer-JPA/diagrams/CLD.png" />
+
+## ERD (Entity Relationship Diagram)
+
+<img src="Steyrer-JPA/diagrams/ERD.png" />
+
+Mein Programm verwaltet einen Busfahrplan inkl. Bus, Busstationen und Tickets.
