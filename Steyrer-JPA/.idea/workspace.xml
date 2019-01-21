@@ -6,20 +6,7 @@
     </artifacts-to-build>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b3b7db22-ae7a-407f-8829-fe31d3aaf648" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/ca0e1f06-84b8-4675-80ee-4cd23deb93d5.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/ca0e1f06-84b8-4675-80ee-4cd23deb93d5.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/diagrams/ERD.png" beforeDir="false" afterPath="$PROJECT_DIR$/diagrams/ERD.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/at/htl/buscompany/business/InitBean.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/at/htl/buscompany/business/InitBean.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/at/htl/buscompany/model/Bus.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/at/htl/buscompany/model/Bus.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/at/htl/buscompany/model/BusStop.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/at/htl/buscompany/model/BusStop.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/at/htl/buscompany/model/RouteTicket.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/at/htl/buscompany/model/RouteTicket.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/at/htl/buscompany/model/Schedule.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/at/htl/buscompany/model/Schedule.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/at/htl/buscompany/model/Ticket.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/at/htl/buscompany/model/Ticket.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/at/htl/buscompany/model/TimeTicket.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/at/htl/buscompany/model/TimeTicket.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/META-INF/persistence.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/META-INF/persistence.xml" afterDir="false" />
-    </list>
+    <list default="true" id="b3b7db22-ae7a-407f-8829-fe31d3aaf648" name="Default Changelist" comment="" />
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -85,11 +72,39 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/at/htl/buscompany/rest/RouteTicketEndpoint.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="-306">
               <caret line="27" column="9" lean-forward="true" selection-start-line="27" selection-start-column="9" selection-end-line="27" selection-end-column="9" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="uml://JAVA/at.htl.buscompany.rest">
+          <provider selected="true" editor-type-id="UmlEditorProvider">
+            <state>
+              <ID>JAVA</ID>
+              <OriginalElement>at.htl.buscompany.rest</OriginalElement>
+              <nodes>
+                <node x="0.0" y="0.0">at.htl.buscompany.rest.ScheduleEndpoint</node>
+                <node x="0.0" y="291.0">at.htl.buscompany.rest.BusCompanyEndpoint</node>
+                <node x="207.0" y="0.0">at.htl.buscompany.rest.BusStopEndpoint</node>
+                <node x="0.0" y="97.0">at.htl.buscompany.rest.TimeTicketEndpoint</node>
+                <node x="207.0" y="97.0">at.htl.buscompany.rest.BusEndpoint</node>
+                <node x="209.0" y="291.0">at.htl.buscompany.rest.RestConfig</node>
+                <node x="0.0" y="194.0">at.htl.buscompany.rest.RouteTicketEndpoint</node>
+              </nodes>
+              <notes />
+              <edges />
+              <settings layout="Hierarchic Group" zoom="1.0" x="-176.0" y="205.0" />
+              <SelectedNodes />
+              <Categories>
+                <Category>Fields</Category>
+              </Categories>
+              <SCOPE>All</SCOPE>
+              <VISIBILITY>private</VISIBILITY>
             </state>
           </provider>
         </entry>
@@ -185,86 +200,69 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="uml://JAVA/at.htl.buscompany.model">
           <provider selected="true" editor-type-id="UmlEditorProvider">
             <state>
               <ID>JAVA</ID>
               <OriginalElement>at.htl.buscompany.model</OriginalElement>
               <nodes>
-                <node x="79.65625" y="0.0">at.htl.buscompany.model.BusStop</node>
-                <node x="537.0" y="0.0">at.htl.buscompany.model.LocalDateTimeConverter</node>
-                <node x="0.0" y="504.0">at.htl.buscompany.model.Schedule</node>
-                <node x="140.875" y="124.0">at.htl.buscompany.model.Ticket</node>
-                <node x="381.0" y="369.0">at.htl.buscompany.model.RouteTicket</node>
-                <node x="250.0" y="369.0">at.htl.buscompany.model.TimeTicket</node>
-                <node x="63.0" y="336.0">at.htl.buscompany.model.Bus</node>
+                <node x="264.25" y="22.0">at.htl.buscompany.model.BusStop</node>
+                <node x="0.0" y="477.0">at.htl.buscompany.model.LocalDateTimeConverter</node>
+                <node x="247.0" y="190.0">at.htl.buscompany.model.Schedule</node>
+                <node x="15.0" y="168.0">at.htl.buscompany.model.Ticket</node>
+                <node x="131.0" y="380.0">at.htl.buscompany.model.RouteTicket</node>
+                <node x="0.0" y="380.0">at.htl.buscompany.model.TimeTicket</node>
+                <node x="37.5" y="0.0">at.htl.buscompany.model.Bus</node>
               </nodes>
               <notes />
               <edges>
                 <edge source="at.htl.buscompany.model.TimeTicket" target="at.htl.buscompany.model.Ticket">
                   <point x="0.0" y="-26.0" />
-                  <point x="305.5" y="311.0" />
-                  <point x="273.375" y="311.0" />
-                  <point x="26.5" y="81.0" />
+                  <point x="55.5" y="355.0" />
+                  <point x="68.0" y="355.0" />
+                  <point x="-53.0" y="81.0" />
                 </edge>
                 <edge source="at.htl.buscompany.model.Schedule" target="at.htl.buscompany.model.BusStop">
-                  <point x="-49.75" y="-59.0" />
-                  <point x="49.75" y="479.0" />
-                  <point x="52.5" y="479.0" />
-                  <point x="52.5" y="99.0" />
-                  <point x="123.65625" y="99.0" />
-                  <point x="-44.0" y="37.0" />
-                </edge>
-                <edge source="at.htl.buscompany.model.Schedule" target="at.htl.buscompany.model.Bus">
                   <point x="49.75" y="-59.0" />
-                  <point x="149.25" y="479.0" />
-                  <point x="146.5" y="479.0" />
-                  <point x="0.0" y="59.0" />
-                </edge>
-                <edge source="at.htl.buscompany.model.Ticket" target="at.htl.buscompany.model.BusStop">
-                  <point x="0.0" y="-81.0" />
-                  <point x="246.875" y="99.0" />
-                  <point x="211.65625" y="99.0" />
                   <point x="44.0" y="37.0" />
                 </edge>
+                <edge source="at.htl.buscompany.model.Schedule" target="at.htl.buscompany.model.Bus">
+                  <point x="-49.75" y="-59.0" />
+                  <point x="296.75" y="138.0" />
+                  <point x="176.66666666666666" y="138.0" />
+                  <point x="55.66666666666666" y="59.0" />
+                </edge>
+                <edge source="at.htl.buscompany.model.Ticket" target="at.htl.buscompany.model.BusStop">
+                  <point x="70.66666666666669" y="-81.0" />
+                  <point x="191.66666666666669" y="148.0" />
+                  <point x="308.25" y="148.0" />
+                  <point x="-44.0" y="37.0" />
+                </edge>
                 <edge source="at.htl.buscompany.model.Bus" target="at.htl.buscompany.model.Ticket">
-                  <point x="-41.75" y="-59.0" />
-                  <point x="104.75" y="311.0" />
-                  <point x="167.375" y="311.0" />
-                  <point x="-79.5" y="81.0" />
+                  <point x="0.0" y="59.0" />
+                  <point x="0.0" y="-81.0" />
                 </edge>
                 <edge source="at.htl.buscompany.model.Ticket" target="at.htl.buscompany.model.Bus">
-                  <point x="-26.5" y="81.0" />
-                  <point x="220.375" y="311.0" />
-                  <point x="188.25" y="311.0" />
-                  <point x="41.75" y="-59.0" />
+                  <point x="-70.66666666666669" y="-81.0" />
+                  <point x="50.333333333333314" y="148.0" />
+                  <point x="65.33333333333334" y="148.0" />
+                  <point x="-55.66666666666666" y="59.0" />
                 </edge>
                 <edge source="at.htl.buscompany.model.RouteTicket" target="at.htl.buscompany.model.Ticket">
                   <point x="0.0" y="-26.0" />
-                  <point x="436.5" y="311.0" />
-                  <point x="326.375" y="311.0" />
-                  <point x="79.5" y="81.0" />
+                  <point x="186.5" y="355.0" />
+                  <point x="174.0" y="355.0" />
+                  <point x="53.0" y="81.0" />
                 </edge>
               </edges>
-              <settings layout="Hierarchic Group" zoom="0.6230529595015576" x="-164.58500000000004" y="375.20000000000005" />
-              <SelectedNodes>
-                <node>at.htl.buscompany.model.LocalDateTimeConverter</node>
-              </SelectedNodes>
+              <settings layout="Hierarchic Group" zoom="0.7000000000000001" x="262.0" y="265.71428571428567" />
+              <SelectedNodes />
               <Categories>
                 <Category>Fields</Category>
               </Categories>
               <SCOPE>All</SCOPE>
               <VISIBILITY>private</VISIBILITY>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/at/htl/buscompany/model/RouteTicket.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="255">
-              <caret line="20" column="39" selection-start-line="20" selection-start-column="39" selection-end-line="20" selection-end-column="39" />
             </state>
           </provider>
         </entry>
@@ -322,7 +320,7 @@
       </MavenImportingSettings>
     </option>
   </component>
-  <component name="ProjectFrameBounds">
+  <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="-2" />
     <option name="width" value="963" />
     <option name="height" value="1032" />
@@ -416,9 +414,9 @@
     <property name="DatabaseDriversLRU" value="derby&#10;h2" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1548060487875" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1548060792313" />
     <property name="database.console.LAST_STATE" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/diagrams/ERD.png" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/diagrams/CLD.png" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
@@ -540,12 +538,12 @@
       <workItem from="1547130827279" duration="96000" />
       <workItem from="1547131941295" duration="1718000" />
       <workItem from="1547232619391" duration="627000" />
-      <workItem from="1548056048757" duration="4399000" />
+      <workItem from="1548056048757" duration="4747000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="63578000" />
+    <option name="totallyTimeSpent" value="63926000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -557,10 +555,10 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-1" y="0" width="770" height="825" extended-state="0" />
+    <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.61786234" visible="true" weight="0.32957748" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.61786234" visible="true" weight="0.15704697" />
       <window_info id="Structure" order="1" sideWeight="0.38213763" side_tool="true" weight="0.24966443" />
       <window_info id="Persistence" order="2" sideWeight="0.39658847" side_tool="true" visible="true" weight="0.28851065" />
       <window_info id="Designer" order="3" />
@@ -571,7 +569,7 @@
       <window_info id="Web" order="8" sideWeight="0.38213763" side_tool="true" weight="0.24966443" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.34179103" />
+      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.3352855" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.39970717" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -593,7 +591,7 @@
       <window_info anchor="right" id="Capture Analysis" order="5" />
       <window_info anchor="right" id="CDI" order="6" />
       <window_info anchor="right" x="0" y="0" width="337" height="638" id="Documentation" order="7" side_tool="true" weight="0.3295302" />
-      <window_info anchor="right" id="Database" order="8" visible="true" weight="0.13521127" />
+      <window_info anchor="right" id="Database" order="8" visible="true" weight="0.06442953" />
       <window_info anchor="right" id="Maven Projects" order="9" />
       <window_info anchor="right" id="Palette&#9;" order="10" />
       <window_info anchor="right" id="Theme Preview" order="11" />
@@ -1001,79 +999,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="uml://JAVA/at.htl.buscompany.model">
-      <provider selected="true" editor-type-id="UmlEditorProvider">
-        <state>
-          <ID>JAVA</ID>
-          <OriginalElement>at.htl.buscompany.model</OriginalElement>
-          <nodes>
-            <node x="79.65625" y="0.0">at.htl.buscompany.model.BusStop</node>
-            <node x="537.0" y="0.0">at.htl.buscompany.model.LocalDateTimeConverter</node>
-            <node x="0.0" y="504.0">at.htl.buscompany.model.Schedule</node>
-            <node x="140.875" y="124.0">at.htl.buscompany.model.Ticket</node>
-            <node x="381.0" y="369.0">at.htl.buscompany.model.RouteTicket</node>
-            <node x="250.0" y="369.0">at.htl.buscompany.model.TimeTicket</node>
-            <node x="63.0" y="336.0">at.htl.buscompany.model.Bus</node>
-          </nodes>
-          <notes />
-          <edges>
-            <edge source="at.htl.buscompany.model.TimeTicket" target="at.htl.buscompany.model.Ticket">
-              <point x="0.0" y="-26.0" />
-              <point x="305.5" y="311.0" />
-              <point x="273.375" y="311.0" />
-              <point x="26.5" y="81.0" />
-            </edge>
-            <edge source="at.htl.buscompany.model.Schedule" target="at.htl.buscompany.model.BusStop">
-              <point x="-49.75" y="-59.0" />
-              <point x="49.75" y="479.0" />
-              <point x="52.5" y="479.0" />
-              <point x="52.5" y="99.0" />
-              <point x="123.65625" y="99.0" />
-              <point x="-44.0" y="37.0" />
-            </edge>
-            <edge source="at.htl.buscompany.model.Schedule" target="at.htl.buscompany.model.Bus">
-              <point x="49.75" y="-59.0" />
-              <point x="149.25" y="479.0" />
-              <point x="146.5" y="479.0" />
-              <point x="0.0" y="59.0" />
-            </edge>
-            <edge source="at.htl.buscompany.model.Ticket" target="at.htl.buscompany.model.BusStop">
-              <point x="0.0" y="-81.0" />
-              <point x="246.875" y="99.0" />
-              <point x="211.65625" y="99.0" />
-              <point x="44.0" y="37.0" />
-            </edge>
-            <edge source="at.htl.buscompany.model.Bus" target="at.htl.buscompany.model.Ticket">
-              <point x="-41.75" y="-59.0" />
-              <point x="104.75" y="311.0" />
-              <point x="167.375" y="311.0" />
-              <point x="-79.5" y="81.0" />
-            </edge>
-            <edge source="at.htl.buscompany.model.Ticket" target="at.htl.buscompany.model.Bus">
-              <point x="-26.5" y="81.0" />
-              <point x="220.375" y="311.0" />
-              <point x="188.25" y="311.0" />
-              <point x="41.75" y="-59.0" />
-            </edge>
-            <edge source="at.htl.buscompany.model.RouteTicket" target="at.htl.buscompany.model.Ticket">
-              <point x="0.0" y="-26.0" />
-              <point x="436.5" y="311.0" />
-              <point x="326.375" y="311.0" />
-              <point x="79.5" y="81.0" />
-            </edge>
-          </edges>
-          <settings layout="Hierarchic Group" zoom="0.6230529595015576" x="-164.58500000000004" y="375.20000000000005" />
-          <SelectedNodes>
-            <node>at.htl.buscompany.model.LocalDateTimeConverter</node>
-          </SelectedNodes>
-          <Categories>
-            <Category>Fields</Category>
-          </Categories>
-          <SCOPE>All</SCOPE>
-          <VISIBILITY>private</VISIBILITY>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/at/htl/buscompany/model/TimeTicket.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="292">
@@ -1119,6 +1044,97 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-306">
           <caret line="27" column="9" lean-forward="true" selection-start-line="27" selection-start-column="9" selection-end-line="27" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="uml://JAVA/at.htl.buscompany.rest">
+      <provider selected="true" editor-type-id="UmlEditorProvider">
+        <state>
+          <ID>JAVA</ID>
+          <OriginalElement>at.htl.buscompany.rest</OriginalElement>
+          <nodes>
+            <node x="0.0" y="0.0">at.htl.buscompany.rest.ScheduleEndpoint</node>
+            <node x="0.0" y="291.0">at.htl.buscompany.rest.BusCompanyEndpoint</node>
+            <node x="207.0" y="0.0">at.htl.buscompany.rest.BusStopEndpoint</node>
+            <node x="0.0" y="97.0">at.htl.buscompany.rest.TimeTicketEndpoint</node>
+            <node x="207.0" y="97.0">at.htl.buscompany.rest.BusEndpoint</node>
+            <node x="209.0" y="291.0">at.htl.buscompany.rest.RestConfig</node>
+            <node x="0.0" y="194.0">at.htl.buscompany.rest.RouteTicketEndpoint</node>
+          </nodes>
+          <notes />
+          <edges />
+          <settings layout="Hierarchic Group" zoom="1.0" x="-176.0" y="205.0" />
+          <SelectedNodes />
+          <Categories>
+            <Category>Fields</Category>
+          </Categories>
+          <SCOPE>All</SCOPE>
+          <VISIBILITY>private</VISIBILITY>
+        </state>
+      </provider>
+    </entry>
+    <entry file="uml://JAVA/at.htl.buscompany.model">
+      <provider selected="true" editor-type-id="UmlEditorProvider">
+        <state>
+          <ID>JAVA</ID>
+          <OriginalElement>at.htl.buscompany.model</OriginalElement>
+          <nodes>
+            <node x="264.25" y="22.0">at.htl.buscompany.model.BusStop</node>
+            <node x="0.0" y="477.0">at.htl.buscompany.model.LocalDateTimeConverter</node>
+            <node x="247.0" y="190.0">at.htl.buscompany.model.Schedule</node>
+            <node x="15.0" y="168.0">at.htl.buscompany.model.Ticket</node>
+            <node x="131.0" y="380.0">at.htl.buscompany.model.RouteTicket</node>
+            <node x="0.0" y="380.0">at.htl.buscompany.model.TimeTicket</node>
+            <node x="37.5" y="0.0">at.htl.buscompany.model.Bus</node>
+          </nodes>
+          <notes />
+          <edges>
+            <edge source="at.htl.buscompany.model.TimeTicket" target="at.htl.buscompany.model.Ticket">
+              <point x="0.0" y="-26.0" />
+              <point x="55.5" y="355.0" />
+              <point x="68.0" y="355.0" />
+              <point x="-53.0" y="81.0" />
+            </edge>
+            <edge source="at.htl.buscompany.model.Schedule" target="at.htl.buscompany.model.BusStop">
+              <point x="49.75" y="-59.0" />
+              <point x="44.0" y="37.0" />
+            </edge>
+            <edge source="at.htl.buscompany.model.Schedule" target="at.htl.buscompany.model.Bus">
+              <point x="-49.75" y="-59.0" />
+              <point x="296.75" y="138.0" />
+              <point x="176.66666666666666" y="138.0" />
+              <point x="55.66666666666666" y="59.0" />
+            </edge>
+            <edge source="at.htl.buscompany.model.Ticket" target="at.htl.buscompany.model.BusStop">
+              <point x="70.66666666666669" y="-81.0" />
+              <point x="191.66666666666669" y="148.0" />
+              <point x="308.25" y="148.0" />
+              <point x="-44.0" y="37.0" />
+            </edge>
+            <edge source="at.htl.buscompany.model.Bus" target="at.htl.buscompany.model.Ticket">
+              <point x="0.0" y="59.0" />
+              <point x="0.0" y="-81.0" />
+            </edge>
+            <edge source="at.htl.buscompany.model.Ticket" target="at.htl.buscompany.model.Bus">
+              <point x="-70.66666666666669" y="-81.0" />
+              <point x="50.333333333333314" y="148.0" />
+              <point x="65.33333333333334" y="148.0" />
+              <point x="-55.66666666666666" y="59.0" />
+            </edge>
+            <edge source="at.htl.buscompany.model.RouteTicket" target="at.htl.buscompany.model.Ticket">
+              <point x="0.0" y="-26.0" />
+              <point x="186.5" y="355.0" />
+              <point x="174.0" y="355.0" />
+              <point x="53.0" y="81.0" />
+            </edge>
+          </edges>
+          <settings layout="Hierarchic Group" zoom="0.7000000000000001" x="262.0" y="265.71428571428567" />
+          <SelectedNodes />
+          <Categories>
+            <Category>Fields</Category>
+          </Categories>
+          <SCOPE>All</SCOPE>
+          <VISIBILITY>private</VISIBILITY>
         </state>
       </provider>
     </entry>
