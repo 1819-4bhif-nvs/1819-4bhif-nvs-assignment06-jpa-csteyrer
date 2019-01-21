@@ -4,9 +4,11 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import java.io.Serializable;
+import java.time.LocalDateTime;
 
 @Entity
-public class RouteTicket extends Ticket {
+public class RouteTicket extends Ticket implements Serializable {
 
     private int stops;
 
@@ -14,9 +16,9 @@ public class RouteTicket extends Ticket {
     public RouteTicket() {
     }
 
-    public RouteTicket(double price, int stops)
+    public RouteTicket(double price,LocalDateTime buyingTime,BusStop busStop, int stops)
     {
-        super(price);
+        super(price, buyingTime,busStop);
         this.stops = stops;
     }
 

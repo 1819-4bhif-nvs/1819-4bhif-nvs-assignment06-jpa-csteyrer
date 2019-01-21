@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <dataSource name="db@localhost">
-  <database-model serializer="dbm" rdbms="DERBY" format-version="4.11">
+  <database-model serializer="dbm" dbms="DERBY" family-id="DERBY" format-version="4.14">
     <root id="1">
-      <ServerVersion>10.14</ServerVersion>
+      <ServerVersion>10.14.2.0</ServerVersion>
     </root>
     <schema id="2" parent="1" name="APP">
       <Current>1</Current>
@@ -39,12 +39,12 @@
       <Position>3</Position>
       <DataType>VARCHAR(255)|12s</DataType>
     </column>
-    <index id="22" parent="13" name="SQL181209000612140">
+    <index id="22" parent="13" name="SQL190121092636020">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>ID</ColNames>
       <Unique>1</Unique>
     </index>
-    <key id="23" parent="13" name="SQL181209000612140">
+    <key id="23" parent="13" name="SQL190121092636020">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>ID</ColNames>
       <Primary>1</Primary>
@@ -60,12 +60,12 @@
       <Position>2</Position>
       <DataType>VARCHAR(255)|12s</DataType>
     </column>
-    <index id="26" parent="14" name="SQL181209000612160">
+    <index id="26" parent="14" name="SQL190121092636040">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>ID</ColNames>
       <Unique>1</Unique>
     </index>
-    <key id="27" parent="14" name="SQL181209000612160">
+    <key id="27" parent="14" name="SQL190121092636040">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>ID</ColNames>
       <Primary>1</Primary>
@@ -80,16 +80,16 @@
       <DataType>BIGINT|-5s</DataType>
       <NotNull>1</NotNull>
     </column>
-    <index id="30" parent="15" name="SQL181209000612180">
+    <index id="30" parent="15" name="SQL190121092636060">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>ID</ColNames>
       <Unique>1</Unique>
     </index>
-    <index id="31" parent="15" name="SQL181209000612250">
+    <index id="31" parent="15" name="SQL190121092636150">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>ID</ColNames>
     </index>
-    <key id="32" parent="15" name="SQL181209000612180">
+    <key id="32" parent="15" name="SQL190121092636060">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>ID</ColNames>
       <Primary>1</Primary>
@@ -98,7 +98,7 @@
       <ColNames>ID</ColNames>
       <RefSchemaName>APP</RefSchemaName>
       <RefTableName>TICKET</RefTableName>
-      <RefKeyName>SQL181209000612210</RefKeyName>
+      <RefKeyName>SQL190121092636110</RefKeyName>
       <RefColNames>ID</RefColNames>
     </foreign-key>
     <column id="34" parent="16" name="ID">
@@ -120,20 +120,20 @@
       <Position>4</Position>
       <DataType>BIGINT|-5s</DataType>
     </column>
-    <index id="38" parent="16" name="SQL181209000612190">
+    <index id="38" parent="16" name="SQL190121092636090">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>ID</ColNames>
       <Unique>1</Unique>
     </index>
-    <index id="39" parent="16" name="SQL181209000612260">
+    <index id="39" parent="16" name="SQL190121092636160">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>BUS_ID</ColNames>
     </index>
-    <index id="40" parent="16" name="SQL181209000612270">
+    <index id="40" parent="16" name="SQL190121092636170">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>BUSSTOP_ID</ColNames>
     </index>
-    <key id="41" parent="16" name="SQL181209000612190">
+    <key id="41" parent="16" name="SQL190121092636090">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>ID</ColNames>
       <Primary>1</Primary>
@@ -142,14 +142,14 @@
       <ColNames>BUS_ID</ColNames>
       <RefSchemaName>APP</RefSchemaName>
       <RefTableName>BUS</RefTableName>
-      <RefKeyName>SQL181209000612140</RefKeyName>
+      <RefKeyName>SQL190121092636020</RefKeyName>
       <RefColNames>ID</RefColNames>
     </foreign-key>
     <foreign-key id="43" parent="16" name="FKLB0FOX4G1VLCGKBFDKA8VPYS4">
       <ColNames>BUSSTOP_ID</ColNames>
       <RefSchemaName>APP</RefSchemaName>
       <RefTableName>BUSSTOP</RefTableName>
-      <RefKeyName>SQL181209000612160</RefKeyName>
+      <RefKeyName>SQL190121092636040</RefKeyName>
       <RefColNames>ID</RefColNames>
     </foreign-key>
     <column id="44" parent="17" name="DTYPE">
@@ -164,65 +164,84 @@
       <SequenceIdentity>1</SequenceIdentity>
       <DefaultExpression>GENERATED_BY_DEFAULT</DefaultExpression>
     </column>
-    <column id="46" parent="17" name="PRICE">
+    <column id="46" parent="17" name="BUYINGTIME">
       <Position>3</Position>
+      <DataType>TIMESTAMP|93s</DataType>
+    </column>
+    <column id="47" parent="17" name="PRICE">
+      <Position>4</Position>
       <DataType>DOUBLE|8s</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="47" parent="17" name="BUS_ID">
-      <Position>4</Position>
+    <column id="48" parent="17" name="BUS_ID">
+      <Position>5</Position>
       <DataType>BIGINT|-5s</DataType>
     </column>
-    <index id="48" parent="17" name="SQL181209000612210">
+    <column id="49" parent="17" name="BUSSTOP_ID">
+      <Position>6</Position>
+      <DataType>BIGINT|-5s</DataType>
+    </column>
+    <index id="50" parent="17" name="SQL190121092636110">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>ID</ColNames>
       <Unique>1</Unique>
     </index>
-    <index id="49" parent="17" name="SQL181209000612280">
+    <index id="51" parent="17" name="SQL190121092636190">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>BUS_ID</ColNames>
     </index>
-    <key id="50" parent="17" name="SQL181209000612210">
+    <index id="52" parent="17" name="SQL190121092636200">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>BUSSTOP_ID</ColNames>
+    </index>
+    <key id="53" parent="17" name="SQL190121092636110">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>ID</ColNames>
       <Primary>1</Primary>
     </key>
-    <foreign-key id="51" parent="17" name="FKO6X2JDGX3W861TFWCO8LFFY78">
+    <foreign-key id="54" parent="17" name="FKO6X2JDGX3W861TFWCO8LFFY78">
       <ColNames>BUS_ID</ColNames>
       <RefSchemaName>APP</RefSchemaName>
       <RefTableName>BUS</RefTableName>
-      <RefKeyName>SQL181209000612140</RefKeyName>
+      <RefKeyName>SQL190121092636020</RefKeyName>
       <RefColNames>ID</RefColNames>
     </foreign-key>
-    <column id="52" parent="18" name="HOURS">
+    <foreign-key id="55" parent="17" name="FKC2CN9RQQSC5L8MKMMN5KY4BQP">
+      <ColNames>BUSSTOP_ID</ColNames>
+      <RefSchemaName>APP</RefSchemaName>
+      <RefTableName>BUSSTOP</RefTableName>
+      <RefKeyName>SQL190121092636040</RefKeyName>
+      <RefColNames>ID</RefColNames>
+    </foreign-key>
+    <column id="56" parent="18" name="HOURS">
       <Position>1</Position>
       <DataType>INTEGER|4s</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="53" parent="18" name="ID">
+    <column id="57" parent="18" name="ID">
       <Position>2</Position>
       <DataType>BIGINT|-5s</DataType>
       <NotNull>1</NotNull>
     </column>
-    <index id="54" parent="18" name="SQL181209000612230">
+    <index id="58" parent="18" name="SQL190121092636130">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>ID</ColNames>
       <Unique>1</Unique>
     </index>
-    <index id="55" parent="18" name="SQL181209000612300">
+    <index id="59" parent="18" name="SQL190121092636220">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>ID</ColNames>
     </index>
-    <key id="56" parent="18" name="SQL181209000612230">
+    <key id="60" parent="18" name="SQL190121092636130">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>ID</ColNames>
       <Primary>1</Primary>
     </key>
-    <foreign-key id="57" parent="18" name="FK210QA3MUI3GXRBBB9KAI0CDL9">
+    <foreign-key id="61" parent="18" name="FK210QA3MUI3GXRBBB9KAI0CDL9">
       <ColNames>ID</ColNames>
       <RefSchemaName>APP</RefSchemaName>
       <RefTableName>TICKET</RefTableName>
-      <RefKeyName>SQL181209000612210</RefKeyName>
+      <RefKeyName>SQL190121092636110</RefKeyName>
       <RefColNames>ID</RefColNames>
     </foreign-key>
   </database-model>

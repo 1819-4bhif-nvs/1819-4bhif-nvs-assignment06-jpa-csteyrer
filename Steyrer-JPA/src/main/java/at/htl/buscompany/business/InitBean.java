@@ -32,7 +32,7 @@ public class InitBean {
         Schedule schedule = new Schedule(bus, busStop, LocalDateTime.of(2018, 12, 1, 18, 30));
         em.persist(schedule);
 
-        TimeTicket ticket = new TimeTicket(2.5, 1);
+        TimeTicket ticket = new TimeTicket(2.5,LocalDateTime.of(2018, 12, 1, 18, 5),busStop, 1);
         ticket.setBus(bus);
         bus.addTicket(ticket);
         em.persist(ticket);

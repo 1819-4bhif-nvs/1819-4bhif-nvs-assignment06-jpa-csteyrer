@@ -17,7 +17,8 @@ public class Bus implements Serializable {
     private Long id;
     private String driverName;
     private String busType;
-    @OneToMany(mappedBy = "bus")
+    @OneToMany(mappedBy = "bus", cascade =
+            {CascadeType.DETACH, CascadeType.MERGE, CascadeType.PERSIST, CascadeType.REFRESH})
     private List<Ticket> tickets;
 
     //region Constructor

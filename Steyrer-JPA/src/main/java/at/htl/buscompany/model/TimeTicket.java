@@ -4,6 +4,7 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import java.time.LocalDateTime;
 
 @Entity
 public class TimeTicket extends Ticket {
@@ -14,8 +15,8 @@ public class TimeTicket extends Ticket {
     public TimeTicket() {
     }
 
-    public TimeTicket(double price, int hours) {
-        super(price);
+    public TimeTicket(double price, LocalDateTime buyingTime,BusStop busStop, int hours) {
+        super(price, buyingTime, busStop);
         this.hours = hours;
     }
 
