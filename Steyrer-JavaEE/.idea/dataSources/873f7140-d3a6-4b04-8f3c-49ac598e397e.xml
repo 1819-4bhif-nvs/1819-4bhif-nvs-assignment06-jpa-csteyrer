@@ -1,0 +1,274 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dataSource name="db@localhost">
+  <database-model serializer="dbm" dbms="DERBY" family-id="DERBY" format-version="4.14">
+    <root id="1">
+      <ServerVersion>10.14.2.0</ServerVersion>
+    </root>
+    <schema id="2" parent="1" name="APP">
+      <Current>1</Current>
+      <Visible>1</Visible>
+    </schema>
+    <schema id="3" parent="1" name="NULLID"/>
+    <schema id="4" parent="1" name="SQLJ"/>
+    <schema id="5" parent="1" name="SYS"/>
+    <schema id="6" parent="1" name="SYSCAT"/>
+    <schema id="7" parent="1" name="SYSCS_DIAG"/>
+    <schema id="8" parent="1" name="SYSCS_UTIL"/>
+    <schema id="9" parent="1" name="SYSFUN"/>
+    <schema id="10" parent="1" name="SYSIBM"/>
+    <schema id="11" parent="1" name="SYSPROC"/>
+    <schema id="12" parent="1" name="SYSSTAT"/>
+    <table id="13" parent="2" name="BUS"/>
+    <table id="14" parent="2" name="BUSSTOP"/>
+    <table id="15" parent="2" name="GUEST"/>
+    <table id="16" parent="2" name="ROUTETICKET"/>
+    <table id="17" parent="2" name="SCHEDULE"/>
+    <table id="18" parent="2" name="TICKET"/>
+    <table id="19" parent="2" name="TIMETICKET"/>
+    <column id="20" parent="13" name="ID">
+      <Position>1</Position>
+      <DataType>BIGINT|-5s</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+      <DefaultExpression>GENERATED_BY_DEFAULT</DefaultExpression>
+    </column>
+    <column id="21" parent="13" name="BUSTYPE">
+      <Position>2</Position>
+      <DataType>VARCHAR(255)|12s</DataType>
+    </column>
+    <column id="22" parent="13" name="DRIVERNAME">
+      <Position>3</Position>
+      <DataType>VARCHAR(255)|12s</DataType>
+    </column>
+    <index id="23" parent="13" name="SQL190224185327470">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>ID</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <key id="24" parent="13" name="SQL190224185327470">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>ID</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="25" parent="14" name="ID">
+      <Position>1</Position>
+      <DataType>BIGINT|-5s</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+      <DefaultExpression>GENERATED_BY_DEFAULT</DefaultExpression>
+    </column>
+    <column id="26" parent="14" name="BUSSTOPNAME">
+      <Position>2</Position>
+      <DataType>VARCHAR(255)|12s</DataType>
+    </column>
+    <index id="27" parent="14" name="SQL190224185327430">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>ID</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <key id="28" parent="14" name="SQL190224185327430">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>ID</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="29" parent="15" name="TICKETS_ID">
+      <Position>1</Position>
+      <DataType>BIGINT|-5s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="30" parent="15" name="BUSES_ID">
+      <Position>2</Position>
+      <DataType>BIGINT|-5s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <index id="31" parent="15" name="SQL190224185327520">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>TICKETS_ID
+BUSES_ID</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <index id="32" parent="15" name="SQL190224185327690">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>TICKETS_ID</ColNames>
+    </index>
+    <index id="33" parent="15" name="SQL190224185327720">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>BUSES_ID</ColNames>
+    </index>
+    <key id="34" parent="15" name="SQL190224185327520">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>TICKETS_ID
+BUSES_ID</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <foreign-key id="35" parent="15" name="GUEST_TICKETS_ID">
+      <ColNames>TICKETS_ID</ColNames>
+      <RefSchemaName>APP</RefSchemaName>
+      <RefTableName>TICKET</RefTableName>
+      <RefKeyName>SQL190224185327220</RefKeyName>
+      <RefColNames>ID</RefColNames>
+    </foreign-key>
+    <foreign-key id="36" parent="15" name="FK_GUEST_BUSES_ID">
+      <ColNames>BUSES_ID</ColNames>
+      <RefSchemaName>APP</RefSchemaName>
+      <RefTableName>BUS</RefTableName>
+      <RefKeyName>SQL190224185327470</RefKeyName>
+      <RefColNames>ID</RefColNames>
+    </foreign-key>
+    <column id="37" parent="16" name="ID">
+      <Position>1</Position>
+      <DataType>BIGINT|-5s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="38" parent="16" name="STOPS">
+      <Position>2</Position>
+      <DataType>INTEGER|4s</DataType>
+    </column>
+    <index id="39" parent="16" name="SQL190224185327340">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>ID</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <index id="40" parent="16" name="SQL190224185327610">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>ID</ColNames>
+    </index>
+    <key id="41" parent="16" name="SQL190224185327340">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>ID</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <foreign-key id="42" parent="16" name="FK_ROUTETICKET_ID">
+      <ColNames>ID</ColNames>
+      <RefSchemaName>APP</RefSchemaName>
+      <RefTableName>TICKET</RefTableName>
+      <RefKeyName>SQL190224185327220</RefKeyName>
+      <RefColNames>ID</RefColNames>
+    </foreign-key>
+    <column id="43" parent="17" name="ID">
+      <Position>1</Position>
+      <DataType>BIGINT|-5s</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+      <DefaultExpression>GENERATED_BY_DEFAULT</DefaultExpression>
+    </column>
+    <column id="44" parent="17" name="STOPTIME">
+      <Position>2</Position>
+      <DataType>TIMESTAMP|93s</DataType>
+    </column>
+    <column id="45" parent="17" name="BUS_ID">
+      <Position>3</Position>
+      <DataType>BIGINT|-5s</DataType>
+    </column>
+    <column id="46" parent="17" name="BUSSTOP_ID">
+      <Position>4</Position>
+      <DataType>BIGINT|-5s</DataType>
+    </column>
+    <index id="47" parent="17" name="SQL190224185327380">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>ID</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <index id="48" parent="17" name="SQL190224185327620">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>BUS_ID</ColNames>
+    </index>
+    <index id="49" parent="17" name="SQL190224185327650">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>BUSSTOP_ID</ColNames>
+    </index>
+    <key id="50" parent="17" name="SQL190224185327380">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>ID</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <foreign-key id="51" parent="17" name="FK_SCHEDULE_BUS_ID">
+      <ColNames>BUS_ID</ColNames>
+      <RefSchemaName>APP</RefSchemaName>
+      <RefTableName>BUS</RefTableName>
+      <RefKeyName>SQL190224185327470</RefKeyName>
+      <RefColNames>ID</RefColNames>
+    </foreign-key>
+    <foreign-key id="52" parent="17" name="SCHEDULEBUSSTOP_ID">
+      <ColNames>BUSSTOP_ID</ColNames>
+      <RefSchemaName>APP</RefSchemaName>
+      <RefTableName>BUSSTOP</RefTableName>
+      <RefKeyName>SQL190224185327430</RefKeyName>
+      <RefColNames>ID</RefColNames>
+    </foreign-key>
+    <column id="53" parent="18" name="ID">
+      <Position>1</Position>
+      <DataType>BIGINT|-5s</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+      <DefaultExpression>GENERATED_BY_DEFAULT</DefaultExpression>
+    </column>
+    <column id="54" parent="18" name="DTYPE">
+      <Position>2</Position>
+      <DataType>VARCHAR(31)|12s</DataType>
+    </column>
+    <column id="55" parent="18" name="BUYINGTIME">
+      <Position>3</Position>
+      <DataType>TIMESTAMP|93s</DataType>
+    </column>
+    <column id="56" parent="18" name="PRICE">
+      <Position>4</Position>
+      <DataType>DOUBLE|8s</DataType>
+    </column>
+    <column id="57" parent="18" name="BUSSTOP_ID">
+      <Position>5</Position>
+      <DataType>BIGINT|-5s</DataType>
+    </column>
+    <index id="58" parent="18" name="SQL190224185327220">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>ID</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <index id="59" parent="18" name="SQL190224185327570">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>BUSSTOP_ID</ColNames>
+    </index>
+    <key id="60" parent="18" name="SQL190224185327220">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>ID</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <foreign-key id="61" parent="18" name="TICKET_BUSSTOP_ID">
+      <ColNames>BUSSTOP_ID</ColNames>
+      <RefSchemaName>APP</RefSchemaName>
+      <RefTableName>BUSSTOP</RefTableName>
+      <RefKeyName>SQL190224185327430</RefKeyName>
+      <RefColNames>ID</RefColNames>
+    </foreign-key>
+    <column id="62" parent="19" name="ID">
+      <Position>1</Position>
+      <DataType>BIGINT|-5s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="63" parent="19" name="HOURS">
+      <Position>2</Position>
+      <DataType>INTEGER|4s</DataType>
+    </column>
+    <index id="64" parent="19" name="SQL190224185327300">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>ID</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <index id="65" parent="19" name="SQL190224185327600">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>ID</ColNames>
+    </index>
+    <key id="66" parent="19" name="SQL190224185327300">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>ID</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <foreign-key id="67" parent="19" name="FK_TIMETICKET_ID">
+      <ColNames>ID</ColNames>
+      <RefSchemaName>APP</RefSchemaName>
+      <RefTableName>TICKET</RefTableName>
+      <RefKeyName>SQL190224185327220</RefKeyName>
+      <RefColNames>ID</RefColNames>
+    </foreign-key>
+  </database-model>
+</dataSource>
