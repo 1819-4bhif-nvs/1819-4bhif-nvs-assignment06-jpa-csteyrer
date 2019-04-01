@@ -10,11 +10,11 @@
 * glassfish5/glassfish/config/asenv.conf
 * set AS_JAVA="/opt/java/jdk/versions/jdk8u202"
 
-<img src="/Glassfish_Images/Glassfish_1.jpeg"> 
+<img src="/Steyrer-JavaEE/Documentation/Glassfish_Images/Glassfish_1.jpeg"> 
 
 * sudo chmod +x glassfish5/bin/asdmin
 
-  <img src="/Glassfish_Images/Glassfish_2.jpeg">
+  <img src="/Steyrer-JavaEE/Documentation//Glassfish_Images/Glassfish_2.jpeg">
 
 * glassfish5/bin/asdmin start-domain
 
@@ -34,27 +34,27 @@
 
   
 
-  <img src="/Glassfish_Images/Glassfish_3.jpeg"> 
+  <img src="/Steyrer-JavaEE/Documentation//Glassfish_Images/Glassfish_3.jpeg"> 
 
   
 
-  <img src="/Glassfish_Images/Glassfish_4.jpeg"> 
+  <img src="/Steyrer-JavaEE/Documentation//Glassfish_Images/Glassfish_4.jpeg"> 
 
   
 
-  <img src="/Glassfish_Images/Glassfish_5.jpeg"> 
+  <img src="/Steyrer-JavaEE/Documentation//Glassfish_Images/Glassfish_5.jpeg"> 
 
   
 
-  <img src="/Glassfish_Images/Glassfish_6.jpeg"> 
+  <img src="/Steyrer-JavaEE/Documentation//Glassfish_Images/Glassfish_6.jpeg"> 
 
   
 
-  <img src="/Glassfish_Images/Glassfish_7.jpeg"> 
+  <img src="/Steyrer-JavaEE/Documentation//Glassfish_Images/Glassfish_7.jpeg"> 
 
   
 
-  <img src="/Glassfish_Images/Glassfish_8.jpeg"> 
+  <img src="/Steyrer-JavaEE/Documentation//Glassfish_Images/Glassfish_8.jpeg"> 
 
   
 
@@ -81,7 +81,7 @@
   * /opt/java/jakartaee/liberty/versions/wlp19.0.0.1/usr/servers/defaultServer/server.env
   * JAVA_HOME=/opt/java/jdk/versions/jdk8u202
 
-  <img src="/Liberty_Images/Liberty_1.jpeg"> 
+  <img src="/Steyrer-JavaEE/Documentation//Liberty_Images/Liberty_1.jpeg"> 
 
   
 
@@ -93,31 +93,31 @@
 
 * bin/installUtility install adminCenter-1.0
 
-  <img src="/Liberty_Images/Liberty_2.jpeg"> 
+  <img src="/Steyrer-JavaEE/Documentation//Liberty_Images/Liberty_2.jpeg"> 
 
   
 
 * /opt/java/jakartaee/liberty/versions/wlp19.0.0.1/usr/servers/defaultServer/server.xml
 
-  <img src="/Liberty_Images/Liberty_5.jpeg"> 
+  <img src="/Steyrer-JavaEE/Documentation//Liberty_Images/Liberty_5.jpeg"> 
 
   
 
 * ./securityUtility encode
 
-  <img src="/Liberty_Images/Liberty_3.jpeg"> 
+  <img src="/Steyrer-JavaEE/Documentation//Liberty_Images/Liberty_3.jpeg"> 
 
   
 
 * https://localhost:9443/adminCenter/
 
-  <img src="/Liberty_Images/Liberty_4.jpeg"> 
+  <img src="/Steyrer-JavaEE/Documentation//Liberty_Images/Liberty_4.jpeg"> 
 
   
 
 * Server konfigurieren:
 
-  <img src="/Liberty_Images/Liberty_7.jpeg"> 
+  <img src="/Steyrer-JavaEE/Documentation//Liberty_Images/Liberty_7.jpeg"> 
 
   
 
@@ -131,11 +131,11 @@
 
 * JDBC-Treiber:
 
-  <img src="/Liberty_Images/Liberty_8.jpeg"> 
+  <img src="/Steyrer-JavaEE/Documentation//Liberty_Images/Liberty_8.jpeg"> 
 
-​            <img src="/Liberty_Images/Liberty_9.jpeg"> 
+​            <img src="/Steyrer-JavaEE/Documentation//Liberty_Images/Liberty_9.jpeg"> 
 
-<img src="/Liberty_Images/Liberty_10.jpeg"> 
+<img src="/Steyrer-JavaEE/Documentation//Liberty_Images/Liberty_10.jpeg"> 
 
 Untergeordnetes Element hinzufügen:
 
@@ -147,17 +147,17 @@ Untergeordnetes Element hinzufügen:
 
 * Datenquelle:
 
-  <img src="/Liberty_Images/Liberty_11.jpeg"> 
+  <img src="/Steyrer-JavaEE/Documentation//Liberty_Images/Liberty_11.jpeg"> 
 
-​            <img src="/Liberty_Images/Liberty_12.jpeg">
-
- 
-
-<img src="/Liberty_Images/Liberty_13.jpeg">
+​            <img src="/Steyrer-JavaEE/Documentation//Liberty_Images/Liberty_12.jpeg">
 
  
 
-<img src="/Liberty_Images/Liberty_14.jpeg">
+<img src="/Steyrer-JavaEE/Documentation//Liberty_Images/Liberty_13.jpeg">
+
+ 
+
+<img src="/Steyrer-JavaEE/Documentation//Liberty_Images/Liberty_14.jpeg">
 
  
 
@@ -167,7 +167,7 @@ Untergeordnetes Element hinzufügen:
 
 * in server.xml addieren
 
-<img src="/Liberty_Images/Liberty_6.jpeg"> 
+<img src="/Steyrer-JavaEE/Documentation//Liberty_Images/Liberty_6.jpeg"> 
 
 * Intellij:
 
@@ -183,7 +183,7 @@ Untergeordnetes Element hinzufügen:
   * tomee/bin/setenv.sh 
   * JAVA_HOME=/opt/java/jdk/versions/jdk8u202
 
-  <img src="/TomEE_Images/TomEE_1.jpeg"> 
+  <img src="/Steyrer-JavaEE/Documentation//TomEE_Images/TomEE_1.jpeg"> 
 
  
 
@@ -193,10 +193,10 @@ Untergeordnetes Element hinzufügen:
 
 * /opt/java/jakartaee/tomee/versions/apache-tomee-plume-8.0.0-M2/conf/tomcat-users.xml
 
- <img src="/TomEE_Images/TomEE_2.jpeg"> 
+ <img src="/Steyrer-JavaEE/Documentation//TomEE_Images/TomEE_2.jpeg"> 
 
 * copy derbyclient to tomee/lib
 * /opt/java/jakartaee/tomee/versions/apache-tomee-plume-8.0.0-M2/conf/tomee.xml
   * add Datasource
 
-<img src="/TomEE_Images/TomEE_3.jpeg"> 
+<img src="/Steyrer-JavaEE/Documentation//TomEE_Images/TomEE_3.jpeg"> 
